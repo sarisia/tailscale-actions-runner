@@ -7,6 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {}
     steps:
+      - name: dump info
+        run: |
+          id
+          pwd
+
       - uses: tailscale/github-action@main
         with:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
