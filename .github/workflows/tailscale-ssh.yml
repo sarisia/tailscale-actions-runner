@@ -19,3 +19,6 @@ jobs:
           hostname: actions
 
       - run: sleep infinity
+
+      - run: tailscale logout
+        if: ${{ always() }}
