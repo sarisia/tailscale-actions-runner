@@ -20,5 +20,5 @@ jobs:
 
       - run: sleep infinity
 
-      - run: tailscale logout
+      - run: sudo tailscale logout
         if: ${{ always() }}
