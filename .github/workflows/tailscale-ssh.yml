@@ -16,5 +16,6 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
           args: --ssh
+          hostname: actions
 
       - run: sleep infinity
