@@ -25,10 +25,11 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
+          content: "<@316911818725392384>"
           description: |
             **GitHub Actions SSH is ready!**
 
-            Run `ssh actions` to connect.
+            Run `ssh runner@actions` to connect.
 
       - run: sleep infinity
 
