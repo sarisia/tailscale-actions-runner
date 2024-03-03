@@ -14,7 +14,8 @@ jobs:
 
       - uses: tailscale/github-action@main
         with:
-          authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
+          oauth-client-id: ${{ vars.TAILSCALE_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TAILSCALE_CLIENT_SECRET }}
           args: --ssh
           hostname: actions
 
