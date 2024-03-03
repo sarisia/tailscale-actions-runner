@@ -29,7 +29,7 @@ jobs:
           description: |
             **GitHub Actions SSH is ready!**
 
-            Run `ssh runner@actions` to connect.
+            Run `ssh -o StrictHostKeyChecking=no runner@actions` to connect.
 
       - run: sleep infinity
 
