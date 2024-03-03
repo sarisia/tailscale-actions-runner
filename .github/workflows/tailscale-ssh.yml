@@ -35,3 +35,13 @@ jobs:
 
       - run: sudo tailscale logout
         if: ${{ always() }}
+        id: logout
+
+      - uses: sarisia/actions-status-discord@v1
+        if: ${{ always() }}
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ steps.logout.outcome }}
+          nocontext: true
+          content: "<@316911818725392384>"
+          title: GitHub Actions SSH Shutdown status
