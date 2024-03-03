@@ -19,6 +19,16 @@ jobs:
           tags: tag:github-actions
           args: --ssh
           hostname: actions
+          version: 1.60.1
+
+      - uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          nodetail: true
+          description: |
+            **GitHub Actions SSH is ready!**
+
+            Run `ssh actions` to connect.
 
       - run: sleep infinity
 
